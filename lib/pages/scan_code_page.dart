@@ -37,23 +37,23 @@ class _ScanCodePageState extends State<ScanCodePage> {
           final Uint8List? image = capture.image;
           for (final barcode in barcodes) {
             print('Barcode found! ${barcode.rawValue}');
-            // barcode.corners
+            print(barcode.corners);
           }
-          if (image != null) {
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  title: Text(
-                    barcodes.first.rawValue ?? "",
-                  ),
-                  content: Image(
-                    image: MemoryImage(image),
-                  ),
-                );
-              },
-            );
-          }
+          // if (image != null) {
+          //   showDialog(
+          //     context: context,
+          //     builder: (context) {
+          //       return AlertDialog(
+          //         title: Text(
+          //           barcodes.first.rawValue ?? "",
+          //         ),
+          //         content: Image(
+          //           image: MemoryImage(image),
+          //         ),
+          //       );
+          //     },
+          //   );
+          // }
         }, // onDetect 콜백
       ),
     );
