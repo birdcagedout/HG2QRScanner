@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hg2_qrscanner/pages/scan_overlay_example.dart';
 
 import 'pages/generate_code_page.dart';
 import 'pages/scan_code_page.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/generate": (context) => const GenerateCodePage(),
-        "/scan": (context) => const ScanCodePage(),
+        // "/scan": (context) => const ScanCodePage(),
+        "/scan": (context) => BarcodeScannerWithOverlay(),
       },
       initialRoute: "/scan",
     );

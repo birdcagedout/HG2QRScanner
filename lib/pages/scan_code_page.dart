@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
@@ -36,8 +35,8 @@ class _ScanCodePageState extends State<ScanCodePage> {
           final List<Barcode> barcodes = capture.barcodes;
           final Uint8List? image = capture.image;
           for (final barcode in barcodes) {
-            print('Barcode found! ${barcode.rawValue}');
-            print(barcode.corners);
+            print('Barcode found! ${barcode.rawValue}');    // Barcode found! http://en.m.wikipedia.org
+            print(barcode.corners);   // [Offset(52.0, 118.0), Offset(136.0, 125.0), Offset(133.0, 217.0), Offset(54.0, 208.0)]
           }
           // if (image != null) {
           //   showDialog(
